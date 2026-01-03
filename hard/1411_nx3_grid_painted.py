@@ -50,3 +50,5 @@ print(solution.numOfWays(3))
 # it became much more clear on how to approach the problem
 # And had become a simple matter of counting the patterns and using dynamic programming (breaking down the problem, into smaller subproblems) 
 # to store the results 
+# Drawing out the problem and the different combinations made it much easier to understand what i was supposed to be doing
+# and how i should be thinking and approaching the problem
