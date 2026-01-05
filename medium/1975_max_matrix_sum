@@ -1,0 +1,60 @@
+class Solution(object):
+    def maxMatrixSum(self, matrix):
+        ans = 0
+        min_val = float("inf")
+        count = 0
+
+        for row in matrix:
+            for val in row:
+                if val < 0 :
+                    count += 1
+                min_val = min(min_val, abs(val))
+                ans += abs(val)
+
+        if count % 2 == 0:
+            return ans
+        else :
+            return ans - 2 * min_val
+        
+# Example usage:
+solution = Solution()
+matrix = [[2,9,3],[5,4,-4],[1,7,1]]
+print(solution.maxMatrixSum(matrix))  # Output: 34
+
+
+# Initial
+#class Solution(object):
+#    def maxMatrixSum(self, matrix):
+#        ans = 0
+#        min_val = -float("inf")
+#        count = 0
+#
+#        for row in matrix:
+#            for val in row:
+#                if val < 0 :
+#                    count += 1
+#                   if val > min_val:
+#                        min_val = val
+#            ans += sum(abs(val) for val in row)
+#
+#        if count % 2 == 0:
+#            return ans
+#        else :
+#           ans += 2 * min_val
+#           return ans
+
+
+# Issue with Initial:
+# 1. The initial value of min_val should be set to positive infinity (float("inf")) instead of negative infinity (-float("inf")).
+# 2. The comparison for updating min_val should be based on the absolute value of val, not val itself.
+# 3. The calculation for adjusting ans when count is odd should subtract 2 * min_val instead of adding it, since min_val represents the smallest absolute value in the matrix.
+# These corrections ensure that the function correctly identifies the smallest absolute value and adjusts the total sum accordingly when there is an odd count of negative numbers.
+
+# Corrected
+# Fixed the issues mentioned above.
+
+# Time Complexity: O(n*m), where n is the number of rows and m is the number of columns in the matrix.
+# Space Complexity: O(1), as we are using a constant amount of extra space regardless of the input size.
+
+# Notes 
+# Setting a variable to float("inf") is a common practice in programming when you need to find the minimum value in a set of numbers. It ensures that any number you encounter will be smaller than this initial value, allowing you to correctly identify the minimum as you iterate through the data.
