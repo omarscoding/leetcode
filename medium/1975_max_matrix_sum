@@ -60,4 +60,4 @@ print(solution.maxMatrixSum(matrix))  # Output: 34
 # Setting a variable to float("inf") is a common practice in programming when you need to find the minimum value in a set of numbers. It ensures that any number you encounter will be smaller than this initial value, allowing you to correctly identify the minimum as you iterate through the data.
 
 # Additional Notes:
-# This problem demonstrates the power of greedy algorithms in matrix manipulation.
+# Initially i found it quite hard to think of the solution, but once i broke it down into the 2 cases of even and odd negative counts, it became much easier to understand and wrap my head around.
