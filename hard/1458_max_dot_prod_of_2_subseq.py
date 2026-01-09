@@ -13,4 +13,14 @@ class Solution(object):
                 dp[i][j] = max (use, dp[i + 1][j], dp[i][j + 1])
 
         return dp[0][0]
-    
+
+
+# Example usage:
+solution = Solution()
+print(solution.maxDotProduct([2,1,-2,5], [3,0,-6]))
+# Input: nums1 = [2,1,-2,5], nums2 = [3,0,-6]
+# Output: 18
+
+# Notes
+# This problem sucks 
+# Reminder to add notes later Jan 8th
