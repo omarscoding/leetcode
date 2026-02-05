@@ -46,5 +46,3 @@ class Solution:
                     ans = cand
 
         return ans
-    
-# Notes
